@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile Form</title>
+    <link rel="stylesheet" href="ht.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>User Profile Form</h2>
+    <form id="profileForm">
+        <div class="form-slide active">
+            <div class="form-group">
+                <label for="experience">Years of Experience:</label>
+                <input type="radio" id="exp1" name="experience" value="1-2 years">
+                <label for="exp1">1-2 years</label>
+                <input type="radio" id="exp2" name="experience" value="3-5 years">
+                <label for="exp2">3-5 years</label>
+                <input type="radio" id="exp3" name="experience" value="6-10 years">
+                <label for="exp3">6-10 years</label>
+                <input type="radio" id="exp4" name="experience" value="10+ years">
+                <label for="exp4">10+ years</label>
+            </div>
+            <button type="button" class="next-button">Next</button>
+        </div>
+
+        <div class="form-slide">
+            <div class="form-group">
+                <label for="background">Professional Background:</label>
+                <input type="text" id="background" name="background">
+            </div>
+            <button type="button" class="next-button">Next</button>
+        </div>
+
+        <div class="form-slide">
+            <div class="form-group">
+                <label>Are you currently employed?</label>
+                <input type="checkbox" id="employed" name="employed" value="Yes">
+                <label for="employed">Yes</label>
+            </div>
+            <button type="button" class="next-button">Next</button>
+        </div>
+
+        <div class="form-slide">
+            <div class="form-group">
+                <label for="career">Which career track do you want to choose?</label>
+                <select id="career" name="career">
+                    <option value="Software Development">Software Development</option>
+                    <option value="Data Science">Data Science</option>
+                    <option value="Product Management">Product Management</option>
+                    <option value="Design">Design</option>
+                    <option value="Marketing">Marketing</option>
+                </select>
+            </div>
+            <button type="submit" style="
+    width: 100%;
+    background: linear-gradient(135deg, #ff7eb9, #ff758c, #ff8e4a, #ffb347);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    outline: none;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+" onmouseover="this.style.background='linear-gradient(135deg, #ffb347, #ff8e4a, #ff758c, #ff7eb9)'; this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 12px rgba(0, 0, 0, 0.3)';" onmouseout="this.style.background='linear-gradient(135deg, #ff7eb9, #ff758c, #ff8e4a, #ffb347)'; this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.2)';">
+    Submit
+</button>
+
+        </div>
+    </form>
+
+    <div class="profile" id="profileDisplay">
+        <!-- Profile will be displayed here -->
+    </div>
+</div>
+
+<script src="ht.js"></script>
+</body>
+</html>
